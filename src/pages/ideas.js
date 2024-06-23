@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Banner from "@/components/Banner";
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -109,7 +110,9 @@ export default function Ideas() {
   };
 
   return (
-    <div>
+    <>
+    <Banner/>
+      <div>
       <div className="controls">
         <div className="showing-info">
           Showing {page * pageSize - pageSize + 1} -{' '}
@@ -139,7 +142,7 @@ export default function Ideas() {
           <div key={post.id} className="post-card">
             <div className="images">
               <Image
-                src={post.small_image[0].url}
+                src={post.small_image.url}
                 alt={post.title}
                 width={150}
                 height={150}
@@ -154,5 +157,7 @@ export default function Ideas() {
       </div>
       <div className="pagination">{renderPagination()}</div>
     </div>
+    </>
+
   );
 }

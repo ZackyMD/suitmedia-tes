@@ -18,6 +18,14 @@ div.posts-grid {
   margin-left: 50px;
 }
 
+div.link {
+  margin-right: 50px;
+}
+
+img.logo{
+  margin-left: 50px;
+}
+
 header {
   background-color: #F96500;
   position: fixed;
@@ -200,7 +208,6 @@ select {
   z-index: 1;
 }
 
-/* styles.css */
 .parallax {
   position: relative;
   overflow: hidden;
@@ -248,4 +255,28 @@ select {
   padding-top: 0px;
   margin-top: 0px;
   font-weight: lighter;
+}
+
+h1.Work {
+  padding-left: 50px;
+}
+
+h1.About {
+  padding-left: 50px;
+}
+
+h1.Canvas {
+  padding-left: 50px;
+}
+
+h1.Contact {
+  padding-left: 50px;
+}
+
+h1.Services {
+  padding-left: 50px;
+}
+
+h1.Homepage {
+  padding-left: 50px;
 }
