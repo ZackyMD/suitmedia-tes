@@ -1,10 +1,11 @@
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
 
 export default function Layout({ children }) {
     return(
         <>
         <Header/>
+        <Banner/>
         <main>
 
             {children}

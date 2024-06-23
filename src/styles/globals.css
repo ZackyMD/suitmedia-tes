@@ -1,5 +1,21 @@
 body {
-  padding: 50px;
+  padding-top: 90px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+div.controls {
+  margin-top: 20px;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+div.posts-grid {
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
 header {
@@ -8,18 +24,40 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 0;
   transition: top 0.3s;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: auto;
 }
 
 header .active {
   border-bottom: 2px solid white;
 }
 
-:link{
+:link {
   margin: 10px;
   color: white;
   text-decoration: none;
+}
+
+.link a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.link a:hover {
+  color: #f0f0f0;
 }
 
 .posts-grid {
@@ -55,12 +93,34 @@ header .active {
 
 .pagination {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .pagination button {
   margin: 0 5px;
   padding: 5px 10px;
   cursor: pointer;
+  background-color: #F96500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #e85400;
+}
+
+.showing-info {
+  font-size: 1em;
+  text-align: left;
 }
 
 .post-date {
@@ -69,3 +129,123 @@ header .active {
   margin-bottom: 2px;
 }
 
+.link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.controls .sort-controls {
+  display: flex;
+  gap: 20px;
+}
+
+.controls .sort-controls > div {
+  display: flex;
+  align-items: center;
+}
+
+.sort-controls label {
+  margin-right: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 20px;
+  text-align: center;
+}
+
+button {
+  border-radius: 70px;
+}
+
+select {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  width: 120px; /* Sesuaikan dengan lebar yang diinginkan */
+  border-radius: 50px; /* Menggunakan nilai yang besar untuk membuat bentuk pill */
+  cursor: pointer;
+  color: #333;
+  background-color: white;
+}
+
+.banner-container {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateZ(0); /* Enable hardware acceleration for smoother parallax */
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* styles.css */
+.parallax {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+
+.parallax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transform: translateZ(0); /* Enable hardware acceleration for smoother parallax */
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+}
+
+.parallax-text-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  text-align: center;
+  flex-direction: column;
+}
+
+.parallax-text h1, .parallax-text h5 {
+  margin: 0;
+  padding: 0px;
+}
+
+.ideas-title-banner {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 35pt;
+}
+
+.ideas-description-banner {
+  padding-top: 0px;
+  margin-top: 0px;
+  font-weight: lighter;
+}
